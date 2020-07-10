@@ -32,5 +32,10 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        
+        people.forEach(elem => console.log(elem[Object.keys(elem)[0]]));
+
+    });
 
 })();

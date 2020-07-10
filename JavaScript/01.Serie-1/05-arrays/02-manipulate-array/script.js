@@ -16,5 +16,20 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+        console.log(fruits);
+        
+        fruits.shift();     // remove first elem
+        fruits.pop();       // remove last elem
+
+        console.log(fruits);
+
+        fruits.unshift("banana");
+        fruits.push("kiwi");
+
+        console.log(fruits);
+
+    });
 
 })();

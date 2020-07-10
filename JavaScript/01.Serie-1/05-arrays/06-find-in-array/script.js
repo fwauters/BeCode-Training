@@ -81,5 +81,13 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+        let item = people.find(elem => (elem[Object.keys(elem)[0]] === "Jean")
+                                        && ((elem[Object.keys(elem)[1]] === "Dupont")));
+
+        console.log(item[Object.keys(item)[2]]);
+
+    });
 
 })();

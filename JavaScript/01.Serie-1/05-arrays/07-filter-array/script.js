@@ -81,5 +81,22 @@
     ];
 
     // your code here
+    function filterArr(arr) {
+
+        let filteredArr = [];
+
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i].age > 18) {
+                filteredArr.push(arr[i]);
+            }
+        }
+        return filteredArr;
+    }
+
+    document.getElementById("run").addEventListener("click", () => {
+
+        console.log(filterArr(people));
+
+    });
 
 })();
