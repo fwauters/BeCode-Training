@@ -21,5 +21,11 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+        let noDuplFruits = [...new Set(fruits)];
+        console.log(noDuplFruits);
+
+    });
 
 })();

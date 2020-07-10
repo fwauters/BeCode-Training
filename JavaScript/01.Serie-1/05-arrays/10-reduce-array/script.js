@@ -82,5 +82,15 @@
     ];
 
     // your code here
+    let agesArr = [];
+
+    for (let i = 0; i < people.length; i++) {
+        let p = Object(people[i]);
+        agesArr.push(p.age);
+    }
+    console.log(agesArr);
+
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    console.log(agesArr.reduce(reducer));
 
 })();

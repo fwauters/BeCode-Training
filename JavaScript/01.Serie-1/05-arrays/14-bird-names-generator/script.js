@@ -31,4 +31,26 @@
     ]);
 
     // your code here
+    function getRandomItem(set) {
+        let items = Array.from(set);
+        return items[Math.floor(Math.random() * items.length)];
+    }
+
+    document.getElementById("run").addEventListener("click", () => {
+
+        let b = Math.floor(Math.random() * birds.length);
+        let d;
+        let f;
+
+        if (birds[b].fem === true) {
+            d = "La ";
+            f = "e";
+        }
+        else {
+            d = "Le ";
+            f = "";
+        }
+        document.getElementById("target").innerHTML = (d + birds[b].name + " " + getRandomItem(adjectives) + f + ".");
+    });
+
 })();

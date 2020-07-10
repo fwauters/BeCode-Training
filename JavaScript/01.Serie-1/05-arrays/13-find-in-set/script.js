@@ -15,4 +15,14 @@
     ]);
 
     // your code here
+
+    document.getElementById("run").addEventListener("click", () => {
+        
+        let n = people.size;
+        let has = people.has("Alexandre");
+
+        console.log("The Set contain " + n + " people.");
+        console.log("Is Alexandre in the Set ? " + has);
+    });
+
 })();
