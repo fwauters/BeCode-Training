@@ -12,5 +12,16 @@
     ];
 
     // your code here
+    let currentImg = 0;
+    let img = document.querySelector("figure img");
+
+    document.getElementById("next").addEventListener("click", () => {
+
+        img.src = gallery[currentImg + 1];
+        currentImg++;
+        if (currentImg === gallery.length - 1) {
+            currentImg = -1;
+        }
+    });
 
 })();

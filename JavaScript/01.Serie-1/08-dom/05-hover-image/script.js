@@ -4,5 +4,11 @@
 (() => {
 
     // your code here
+    let imgHover = document.querySelector("figure img");
+    imgHover.addEventListener("mouseover", () => {
+        
+        let source = document.querySelector("figure img").getAttribute("data-hover");
+        imgHover.src = source;
+    });
 
 })();

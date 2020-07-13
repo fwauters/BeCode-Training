@@ -4,5 +4,6 @@
 (() => {
 
     // your code here
+    document.querySelector("section.material p").innerHTML = "owned";
 
 })();
