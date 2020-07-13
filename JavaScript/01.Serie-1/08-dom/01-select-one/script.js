@@ -1,4 +1,4 @@
-// 06-dom/01-select-one/script.js - 6.1: select by id
+// 08-dom/01-select-one/script.js - 8.1: select by id
 
 (() => {
 

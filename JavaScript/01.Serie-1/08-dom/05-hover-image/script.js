@@ -1,4 +1,4 @@
-// 06-dom/05-hover-image/script.js - 6.5: image hover
+// 08-dom/05-hover-image/script.js - 8.5: image hover
 
 
 (() => {

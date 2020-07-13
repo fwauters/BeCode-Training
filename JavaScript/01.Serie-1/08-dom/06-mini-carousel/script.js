@@ -1,4 +1,4 @@
-// 06-dom/06-mini-carousel/script.js - 6.6: mini carousel
+// 08-dom/06-mini-carousel/script.js - 8.6: mini carousel
 
 
 (() => {

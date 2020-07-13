@@ -1,4 +1,4 @@
-// 06-dom/03-select-three/script.js - 6.3: select multiple elements by css selector
+// 08-dom/03-select-three/script.js - 8.3: select multiple elements by css selector
 
 
 (() => {

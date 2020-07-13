@@ -1,4 +1,4 @@
-// 06-dom/11-change-event-input-one/script.js - 6.11: change event (1)
+// 08-dom/11-change-event-input-one/script.js - 8.11: change event (1)
 
 
 (() => {
