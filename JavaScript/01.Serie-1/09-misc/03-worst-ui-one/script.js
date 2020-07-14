@@ -4,5 +4,13 @@
 (() => {
 
     // your code here
+    let elem = document.getElementById("slider");
+    let val = document.getElementById("slider").value;
+    document.getElementById("target").innerHTML = "0" + val;
+
+    elem.addEventListener("change", () => {
+        val = document.getElementById("slider").value;
+        document.getElementById("target").innerHTML = "0" + val;
+    });
 
 })();
