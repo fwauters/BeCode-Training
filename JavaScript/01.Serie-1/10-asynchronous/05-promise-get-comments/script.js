@@ -3,4 +3,20 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click', () => {
+
+        let postPromise = window.lib.getPosts();
+
+        postPromise.then((post) => {
+            post.forEach(element => {
+
+                let commentPromise = window.lib.getComments(post.id);
+
+                commentPromise.then((comment) => {
+                    element.comment = comment;
+                    console.log(comment);
+                })
+            });
+        })
+    });
 })();

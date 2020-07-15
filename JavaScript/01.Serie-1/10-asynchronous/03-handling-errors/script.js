@@ -3,4 +3,13 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+        window.lib.getPersons((error, persons) => {
+            if (error !== null) {
+                console.error(error);
+            }
+            console.log(persons);
+        })
+    })
 })();

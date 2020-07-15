@@ -3,4 +3,16 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+        let promise = window.lib.getPersons();
+
+        promise.then(
+            (persons) => {
+                console.log(persons);
+            }
+            , (error) => {
+                console.error(error);
+            })
+    })
 })();

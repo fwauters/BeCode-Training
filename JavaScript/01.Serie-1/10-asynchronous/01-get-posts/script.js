@@ -3,4 +3,12 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click', () => {
+
+        window.lib.getPosts((error, callback) => {
+            callback.forEach(post => console.log(post))
+        });
+    });
+
 })();
+
