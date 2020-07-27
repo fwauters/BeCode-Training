@@ -5,7 +5,7 @@
 
     // your code here
 
-    function fontSizeWave(elemHtml) { 
+    function fontSizeWave(elemHtml) {
         let x = 2;
         let y = 8;
         let int = setInterval(frame, 100);
@@ -17,9 +17,9 @@
                 else {
                     elemHtml.style.fontSize = y + "rem";
                     y--;
-                }               
+                }
             }
-            else { 
+            else {
                 elemHtml.style.fontSize = x + "rem";
                 x++;
             }
@@ -35,16 +35,25 @@
                 clearInterval(int);
             }
             else {
-               char = txt.substring(i, (i + 1));
-               console.log(char);
+                char = txt.substring(i, (i + 1));
+                console.log(char);
                 i++;
             }
         }
     }
-    
+
+    function pullAndPush(elemId) {
+        let txt = document.getElementById(elemId).textContent;
+        for (let i = 0; i < txt.length; i++) {
+            document.getElementsByTagName("b").remove();
+            document.getElementById(elemId).innerHTML = addTag(txt[i], "b");
+            fontSizeWave(document.getElementsByTagName("b"));
+        }
+    }
+
     //-----------document.getElementsByTagName(tag).remove();-----------
     function addTag(string, tag) {
-        let result = tag + string + tag;
+        let result = "<" + tag + "/>" + string + "</" + tag + ">";
         return result;
     }
     /*
@@ -53,7 +62,7 @@
 
     console.log(selCharWithDelay(txt));
     */
-    fontSizeWave(document.getElementById("target"));
+    pullAndPush("target");
 
-    selCharWithDelay(document.getElementById("target").textContent);
+    //selCharWithDelay(document.getElementById("target").textContent);
 })();

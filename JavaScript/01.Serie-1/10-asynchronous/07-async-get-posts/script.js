@@ -3,4 +3,14 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click', getP);
+
+    async function getP() {
+        let promise = await window.lib.getPosts();
+
+        promise.forEach(element => {
+            console.log(element);
+        });
+    }
+
 })();

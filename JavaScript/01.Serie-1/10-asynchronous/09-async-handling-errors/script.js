@@ -3,4 +3,18 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", getP);
+
+    async function getP() {
+        let promise = await window.lib.getPersons();
+
+        promise.forEach(
+            (persons) => {
+                console.log(persons);
+            }
+            , (error) => {
+                console.error(error);
+            });
+    }
+
 })();

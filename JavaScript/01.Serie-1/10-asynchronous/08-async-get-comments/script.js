@@ -3,4 +3,21 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click', getC);
+
+    async function getC() {
+        let postPromise = await window.lib.getPosts();
+
+        postPromise.forEach(element => {
+
+            let commentPromise = window.lib.getComments(postPromise.id);
+
+            commentPromise.then((comment) => {
+                element.comment = comment;
+                console.log(comment);
+            })
+        });
+    }
+
+
 })();
