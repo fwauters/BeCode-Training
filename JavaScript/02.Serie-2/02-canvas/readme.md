@@ -1,3 +1,5 @@
+*My version of this exercise is right [here](https://github.com/fwauters/SpaceInvaders)*
+
 # Pew-Pew !
 
 Pew-pew is a shooting game made in javascript(canvas).
