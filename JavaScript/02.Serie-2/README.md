@@ -6,15 +6,15 @@
 
 ## 1.Ajax
 
-- [Ajax](./1.Ajax)
+- [Ajax](./01-ajax)
 
 ## 2.Canvas
 
-- [Canvas](./2.Canvas)
+- [Canvas](./02-canvas)
 
 ## 3.Jasmine
 
-- [Jasmine](./3.Jasmine)
+- [Jasmine](./03-jasmine)
 
 ## To infinity... and beyond !
 
