@@ -26,43 +26,25 @@
         }
     }
 
-    function selCharWithDelay(txt) {
-        let char;
-        let i = 0;
-        let int = setInterval(frame, 100);
-        function frame() {
-            if (i === txt.length) {
-                clearInterval(int);
-            }
-            else {
-                char = txt.substring(i, (i + 1));
-                console.log(char);
-                i++;
-            }
-        }
-    }
-
-    function pullAndPush(elemId) {
-        let txt = document.getElementById(elemId).textContent;
+    function pullAndPush(elemId, txt, tag) {
         for (let i = 0; i < txt.length; i++) {
-            document.getElementsByTagName("b").remove();
-            document.getElementById(elemId).innerHTML = addTag(txt[i], "b");
-            fontSizeWave(document.getElementsByTagName("b"));
+
+            let result = addTag(txt, i, tag);
+            document.getElementById(elemId).innerHTML = result;
+            elemTag = document.querySelector(tag);
+            elemTag.id = "actual";
+            elemTag.content = "text";
+            fontSizeWave(document.getElementById("actual"));
         }
     }
 
-    //-----------document.getElementsByTagName(tag).remove();-----------
-    function addTag(string, tag) {
-        let result = "<" + tag + "/>" + string + "</" + tag + ">";
+    function addTag(string, i, tag) {
+        let result = string.substring(0, i) + "<" + tag + ">" + string[i] + "</" + tag + ">" + string.substring(i + 1, string.length);
         return result;
     }
-    /*
+
+    let tag = "b";
     let txt = document.getElementById("target").textContent;
-    console.log(txt);
+    pullAndPush("target", txt, tag);
 
-    console.log(selCharWithDelay(txt));
-    */
-    pullAndPush("target");
-
-    //selCharWithDelay(document.getElementById("target").textContent);
 })();
